@@ -20,8 +20,6 @@ export default ({
     fetchAllDevelopers();
   }, [fetchAllDevelopers]);
 
-  // const [id, setId] = useState(10);
-
   return (
     <>
       <div className="DeveloperList-header">
@@ -46,20 +44,21 @@ export default ({
 
       <div className="DeveloperList-container">
         {developers.map((dev) => (
-          <DeveloperCard developer={dev} key={dev.id} />
+          <DeveloperCard
+            developer={dev}
+            key={dev.id}
+            deleteDev={(id) => {debugger; deleteDeveloper(id)}}
+          />
         ))}
       </div>
 
-      {/* <button
+      <button
         onClick={() =>
           addDeveloper({ title: "Altran Inc.", location: "Gurgaon" })
         }
       >
         Add Developer
       </button>
-
-      <input value={id} onChange={(e) => setId(e.target.value)} />
-      <button onClick={() => deleteDeveloper(id)}>Delete Developer</button> */}
     </>
   );
 };

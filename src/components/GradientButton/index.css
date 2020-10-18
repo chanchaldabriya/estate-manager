@@ -9,3 +9,9 @@
     font-size: 0.9rem;
     min-width: 230px;
 }
+
+.GradientButton.withPlus:before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 1.1rem;
+}

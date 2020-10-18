@@ -1,7 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import "./index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-export default ({ developer = {} }) => {
+export default ({ deleteDev, developer }) => {
   const {
     logo,
     imgURL,
@@ -11,6 +14,7 @@ export default ({ developer = {} }) => {
     totalProjects,
     desc,
     location,
+    id,
   } = developer;
 
   const statComponent = (data, info) => {
@@ -22,8 +26,14 @@ export default ({ developer = {} }) => {
     );
   };
 
+  const [showContextMenu, setShowContextMenu] = useState(false);
+
   return (
-    <div className="DeveloperCard">
+    <div
+      className="DeveloperCard"
+      onMouseOverCapture={() => setShowContextMenu(true)}
+      onMouseLeave={() => setShowContextMenu(false)}
+    >
       <div className="DeveloperCard-header">
         <img
           className="DeveloperCard-logo"
@@ -55,6 +65,34 @@ export default ({ developer = {} }) => {
           </div>
         </div>
       </div>
+
+      {showContextMenu && (
+        <div className="DeveloperCard-contextMenu">
+          <button className="DeveloperCard-contextMenu-btn">
+            <FontAwesomeIcon
+              icon={faEdit}
+              color="white"
+              className="DeveloperCard-contextMenu-btn-icon editIcon"
+            />
+            <span className="DeveloperCard-contextMenu-btn-text">Edit</span>
+          </button>
+
+          <button
+            className="DeveloperCard-contextMenu-btn"
+            onClick={() => {
+              debugger;
+              deleteDev(id);
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faTrash}
+              color="white"
+              className="DeveloperCard-contextMenu-btn-icon deleteIcon"
+            />
+            <span className="DeveloperCard-contextMenu-btn-text">Delete</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 };
