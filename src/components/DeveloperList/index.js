@@ -4,6 +4,7 @@ import DeveloperCard from "../DeveloperCard";
 import GradientButton from "../GradientButton";
 import GradientText from "../GradientText";
 import "./index.css";
+import { useHistory } from "react-router-dom";
 
 export default ({
   developers,
@@ -11,6 +12,8 @@ export default ({
   addDeveloper,
   deleteDeveloper,
 }) => {
+  let history = useHistory();
+
   useEffect(() => {
     // Make API call to fetch all developers after mount
     debugger;
@@ -26,7 +29,11 @@ export default ({
           <GradientText firstText="Featured" secondText="Developers" />
           <span>Prominent developers in Bangalore</span>
         </div>
-        <GradientButton name="Add New Developer" showPlusIcon />
+        <GradientButton
+          name="Add New Developer"
+          showPlusIcon
+          onClick={() => history.push("/add")}
+        />
       </div>
 
       {/* <ul className="DeveloperList">
@@ -38,7 +45,9 @@ export default ({
       </ul> */}
 
       <div className="DeveloperList-container">
-        {developers.map(dev => <DeveloperCard developer={dev} key={dev.id}/>)}
+        {developers.map((dev) => (
+          <DeveloperCard developer={dev} key={dev.id} />
+        ))}
       </div>
 
       {/* <button
