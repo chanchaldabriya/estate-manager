@@ -1,0 +1,23 @@
+.DeveloperList-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.DeveloperList-header-text {
+    display: flex;
+    flex-direction: column;
+    color: #888;
+    font-weight: 700;
+}
+
+.DeveloperList-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.DeveloperList-container > * {
+    margin-bottom: 20px;
+}

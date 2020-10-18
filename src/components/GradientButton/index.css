@@ -1,0 +1,11 @@
+.GradientButton {
+    background: linear-gradient(to left, var(--main-color), var(--secondary-color));
+    color: white;
+    border: 0;
+    padding: 0 2%;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+    min-width: 230px;
+}

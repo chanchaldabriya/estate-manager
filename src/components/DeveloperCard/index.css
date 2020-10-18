@@ -1,0 +1,102 @@
+.DeveloperCard {
+  padding: 20px;
+  width: 25%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  border-top-color: var(--main-color);
+  border-top-width: 5px;
+}
+
+.DeveloperCard-header {
+  display: flex;
+}
+
+.DeveloperCard-logo {
+  height: 100px;
+  margin: 10px 10px 10px 0;
+}
+
+.DeveloperCard-info {
+  flex: 1;
+  margin: 10px 0 10px 10px;
+}
+
+.DeveloperCard-title {
+  margin: 10px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.DeveloperCard-desc {
+  margin: 5px 0;
+}
+
+.Stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.Stat-data {
+  font-weight: bold;
+}
+
+.DeveloperCard-exp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.DeveloperCard-location {
+    margin-top: 30px;
+}
+
+.DeveloperCard-location-title {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+.DeveloperCard-location-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.DeveloperCard-location-img:after {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom, transparent 40%, black);
+	opacity: .6; 
+}
+
+.DeveloperCard-location-info {
+    color: white;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: auto;
+    font-weight: bold;
+    padding-left: 10px;
+    z-index: 1;
+    margin-top: auto;
+}
+
+.DeveloperCard-location-info > * {
+    margin-bottom: 10px;
+}
