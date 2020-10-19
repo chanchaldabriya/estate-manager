@@ -3,8 +3,11 @@ import { useState } from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { useHistory } from "react-router-dom";
 
 export default ({ deleteDev, developer }) => {
+  let history = useHistory();
+
   const {
     logo,
     imgURL,
@@ -68,7 +71,10 @@ export default ({ deleteDev, developer }) => {
 
       {showContextMenu && (
         <div className="DeveloperCard-contextMenu">
-          <button className="DeveloperCard-contextMenu-btn">
+          <button
+            className="DeveloperCard-contextMenu-btn"
+            onClick={() => history.push(`/edit/${id}`)}
+          >
             <FontAwesomeIcon
               icon={faEdit}
               color="white"

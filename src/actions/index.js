@@ -31,6 +31,25 @@ export function addDeveloper(dev) {
   }
 }
 
+export function editDeveloper(dev, id) {
+  return function (dispatch) {
+    return fetch(`${BASE_URL}/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dev),
+    })
+    .then(resp => {
+      debugger;
+      if(resp.status === 201 && resp.statusText === "Created")
+        console.log("Developer successfully added");
+    })
+    // .then((response) => response.json())
+    // .then((json) => dispatch(receiveAllDevelopers(json)));
+  }
+}
+
 export function deleteDeveloper(id) {
   // return { type: DELETE_DEVELOPER, id };
   return function (dispatch) {

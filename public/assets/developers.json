@@ -34,20 +34,26 @@
       "id": 3
     },
     {
-      "title": "Altran Inc.",
-      "location": "Gurgaon",
-      "id": 4
-    },
-    {
       "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV8o8IhAE_pIKlWx6fIBqELxMFj1hE_PlXgTuMx2yQxlSpAbvR",
-      "title": "Innovify Solutions",
+      "title": "Innovifications Solutions",
       "totalExp": "9",
       "totalProjects": "54",
       "desc": "Developer company in Ahmedabad",
-      "imgTitle": "Innovify Solutions - Port Helper",
+      "imgTitle": "Innovifications Solutions - Port Helper",
       "location": "Ahmedabad",
       "imgURL": "https://picsum.photos/200",
       "id": 5
+    },
+    {
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV8o8IhAE_pIKlWx6fIBqELxMFj1hE_PlXgTuMx2yQxlSpAbvR",
+      "title": "Innovifications Galantry Solutions",
+      "totalExp": "2",
+      "totalProjects": "15",
+      "desc": "Developer company in Ahmedabad - Porsche area",
+      "imgTitle": "Innovifications Solutions - Port Helper One Two Threee",
+      "location": "Ahmedabad - Vallabh Nagar",
+      "imgURL": "https://picsum.photos/300/400",
+      "id": 6
     }
   ]
 }

@@ -1,7 +1,8 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { deleteDeveloper, fetchAllDevelopers } from "../actions";
+import { deleteDeveloper, fetchAllDevelopers, addDeveloper, editDeveloper } from "../actions";
 import DeveloperList from "../components/DeveloperList";
+import AddDeveloper from "../components/AddDeveloper";
 
 const mapStateToProps = (state) => ({
   developers: state.developers,
@@ -12,8 +13,13 @@ const mapDispatchToProps = (dispatch) =>
     {
       fetchAllDevelopers,
       deleteDeveloper,
+      addDeveloper,
+      editDeveloper
     },
     dispatch
   );
 
-export default connect(mapStateToProps, mapDispatchToProps)(DeveloperList);
+export default {
+  DeveloperList: connect(mapStateToProps, mapDispatchToProps)(DeveloperList),
+  AddDeveloper: connect(mapStateToProps, mapDispatchToProps)(AddDeveloper)
+}

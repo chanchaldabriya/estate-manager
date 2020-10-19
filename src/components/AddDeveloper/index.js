@@ -1,11 +1,21 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
-import { addDeveloper } from "../../actions";
 import GradientText from "../../components/GradientText";
 import GradientButton from "../../components/GradientButton";
 import "./index.css";
 
-const AddDeveloper = ({ dispatch }) => {
+export default ({
+  history,
+  match,
+  addDeveloper,
+  editDeveloper,
+  developers,
+}) => {
+  const isEdit = match.path === "/edit/:id";
+  let { id } = isEdit ? match.params : -1;
+  let devToEdit = developers.filter((dev) => dev.id === parseInt(id));
+  if (devToEdit && devToEdit.length > 0) devToEdit = devToEdit[0];
+  else devToEdit = {};
+
   /* Developer data */
   const [developerData, setDeveloperData] = useState({
     logo: "",
@@ -16,6 +26,7 @@ const AddDeveloper = ({ dispatch }) => {
     imgTitle: "",
     location: "",
     imgURL: "",
+    ...devToEdit,
   });
 
   /* Local form field creator function */
@@ -107,13 +118,16 @@ const AddDeveloper = ({ dispatch }) => {
       )}
 
       <GradientButton
-        name="Add"
+        name={isEdit ? "Update" : "Add"}
         style={{ padding: 10, width: "100%" }}
-        onClick={() => dispatch(addDeveloper(developerData))}
+        onClick={() => {
+          isEdit
+            ? editDeveloper(developerData, id)
+            : addDeveloper(developerData);
+          history.push("/");
+        }}
         disabled={developerData["title"].length === 0}
       />
     </form>
   );
 };
-
-export default connect()(AddDeveloper);
