@@ -49,11 +49,11 @@
 }
 
 .editIcon {
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
 }
 
 .deleteIcon {
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
 }
 
 .DeveloperCard-header {

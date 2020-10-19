@@ -5,7 +5,7 @@ import GradientText from "../GradientText";
 import "./index.css";
 import { useHistory } from "react-router-dom";
 
-export default ({ developers, fetchAllDevelopers, deleteDeveloper }) => {
+export default ({ developers=[], fetchAllDevelopers, deleteDeveloper }) => {
   let history = useHistory();
 
   useEffect(() => {

@@ -7,7 +7,7 @@ import { combineReducers } from "redux";
 function developers(state = [], action) {
   switch (action.type) {
     case RECEIVE_ALL_DEVELOPERS:
-      return [...state, ...action.devs];
+      return [...action.devs];
     default:
       return state;
   }
