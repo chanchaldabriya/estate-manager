@@ -15,3 +15,8 @@
     margin-right: 10px;
     font-size: 1rem;
 }
+
+.GradientButton[disabled] {
+    background: #999;
+    pointer-events: none;
+}

@@ -37,7 +37,7 @@ export function deleteDeveloper(id) {
     return fetch(`${BASE_URL}/${id}`, {
       method: 'DELETE'
     })
-    .then(resp => {debugger;})
+    .then(resp => console.log("Deleted successfully"))
   }
 }
 

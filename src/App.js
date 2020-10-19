@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
-import AddDeveloper from "./components/AddDeveloper";
+import AddDeveloper from "./containers/AddDeveloper";
 import FeaturedDevelopers from "./containers/FeaturedDevelopers";
 
 function App() {

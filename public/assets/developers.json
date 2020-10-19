@@ -37,6 +37,17 @@
       "title": "Altran Inc.",
       "location": "Gurgaon",
       "id": 4
+    },
+    {
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV8o8IhAE_pIKlWx6fIBqELxMFj1hE_PlXgTuMx2yQxlSpAbvR",
+      "title": "Innovify Solutions",
+      "totalExp": "9",
+      "totalProjects": "54",
+      "desc": "Developer company in Ahmedabad",
+      "imgTitle": "Innovify Solutions - Port Helper",
+      "location": "Ahmedabad",
+      "imgURL": "https://picsum.photos/200",
+      "id": 5
     }
   ]
 }

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { deleteDeveloper, fetchAllDevelopers, addDeveloper } from "../actions";
+import { deleteDeveloper, fetchAllDevelopers } from "../actions";
 import DeveloperList from "../components/DeveloperList";
 
 const mapStateToProps = (state) => ({
@@ -11,8 +11,7 @@ const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
     {
       fetchAllDevelopers,
-      addDeveloper,
-      deleteDeveloper
+      deleteDeveloper,
     },
     dispatch
   );

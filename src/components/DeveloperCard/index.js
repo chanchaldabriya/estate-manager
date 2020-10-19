@@ -79,10 +79,7 @@ export default ({ deleteDev, developer }) => {
 
           <button
             className="DeveloperCard-contextMenu-btn"
-            onClick={() => {
-              debugger;
-              deleteDev(id);
-            }}
+            onClick={() => deleteDev(id)}
           >
             <FontAwesomeIcon
               icon={faTrash}
